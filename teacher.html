@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,27 +14,107 @@
             padding: 0 20px;
             color: #333;
         }
+
+        /* Password protection styles */
+        #password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        #password-box {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        #password-box h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        #password-box p {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        #password-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        #password-input:focus {
+            outline: none;
+            border-color: #f5576c;
+        }
+
+        #password-submit {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        #password-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        #content {
+            display: none;
+        }
+
         h1 {
             color: #1a1a1a;
             border-bottom: 3px solid #333;
             padding-bottom: 10px;
         }
+
         h2 {
             color: #2c3e50;
             margin-top: 40px;
             border-left: 5px solid #3498db;
             padding-left: 15px;
         }
+
         h3 {
             color: #34495e;
             margin-top: 30px;
         }
+
         .fallacy {
             color: #c0392b;
             font-weight: bold;
             text-decoration: underline;
             position: relative;
         }
+
         .annotation {
             background-color: #fff3cd;
             border-left: 4px solid #ff6b6b;
@@ -41,6 +122,7 @@
             margin: 20px 0;
             border-radius: 4px;
         }
+
         .fallacy-type {
             color: #fff;
             background-color: #c0392b;
@@ -51,6 +133,7 @@
             text-transform: uppercase;
             margin-right: 8px;
         }
+
         .analysis-box {
             background-color: #e8f5e9;
             border: 2px solid #4caf50;
@@ -58,6 +141,7 @@
             margin: 25px 0;
             border-radius: 6px;
         }
+
         .context {
             font-style: italic;
             color: #555;
@@ -66,276 +150,224 @@
             border-radius: 4px;
             margin: 15px 0;
         }
+
         .argument-text {
             background-color: #f9f9f9;
             padding: 20px;
             border-left: 4px solid #666;
             margin: 20px 0;
         }
+
         ul {
             line-height: 2;
         }
+
         .summary {
             background-color: #e3f2fd;
             padding: 20px;
             border-radius: 6px;
             margin: 30px 0;
         }
+
         .key-point {
             color: #d35400;
             font-weight: bold;
         }
     </style>
 </head>
+
 <body>
-    <h1>Logical Fallacy Analysis - Teacher's Annotated Guide</h1>
-    <p><strong>Purpose:</strong> This guide provides detailed analysis of each text, highlighting specific fallacies in red and explaining why each represents flawed reasoning.</p>
-    
-    <hr>
-    
-    <h2>Text 1: The Social Media Debate</h2>
-    
-    <div class="context">
-        <strong>Context:</strong> The following is an excerpt from a school board meeting discussion about social media regulation.
-    </div>
-    
-    <div class="argument-text">
-        <p>"Ladies and gentlemen, we should ban all social media platforms for teenagers under 16. Let me tell you what happened to <span class="fallacy">my neighbor's son, Marcus. He was a straight-A student until he got an Instagram account last year. Within six months, his grades dropped from an A to a C.</span> I watched it happen right before my eyes. His mother told me he was spending hours and hours scrolling through his feed, looking at other people's perfect lives. <span class="fallacy">Clearly, social media is destroying our youth's academic potential and mental health.</span></p>
-        
-        <p>Furthermore, <span class="fallacy">every responsible parent I know agrees that social media is harmful.</span> Last week at my book club, all eight parents nodded their heads when I brought this up. Not a single one disagreed. That's what I call a consensus. <span class="fallacy">And these aren't just any parents—these are educated, professional people who care deeply about their children.</span></p>
-        
-        <p>Now, I know some of you might hesitate on this ban, but let me be clear: <span class="fallacy">if you don't support this ban, you obviously don't care about children's education and well-being. There's simply no other explanation for opposing such a common-sense measure.</span> Everyone knows that protecting children is our top priority, so <span class="fallacy">anyone who votes against this is clearly not putting children first.</span></p>
-        
-        <p>I've also been looking at the research, and while I'm not a scientist myself, I can tell you that <span class="fallacy">studies show correlation between social media use and depression. Correlation means causation in this case—it's obvious.</span> Anyone with common sense can see that social media causes these problems. We need to act now before we lose an entire generation to their phones."</p>
-    </div>
-    
-    <div class="analysis-box">
-        <h3>Detailed Fallacy Analysis</h3>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Anecdotal Evidence</span> <span class="fallacy-type">Hasty Generalization</span></p>
-            <p><strong>Text:</strong> "my neighbor's son, Marcus...his grades dropped from an A to a C"</p>
-            <p><strong>Analysis:</strong> The speaker uses a single example to support a sweeping policy affecting all teenagers. One student's experience cannot establish causation or represent the experiences of all teenagers. There could be numerous confounding variables (family issues, health problems, academic difficulty, etc.) that weren't considered.</p>
-        </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">False Cause (Post Hoc)</span></p>
-            <p><strong>Text:</strong> "Correlation means causation in this case—it's obvious"</p>
-            <p><strong>Analysis:</strong> The speaker explicitly commits the correlation-causation fallacy. Just because social media use and depression occur together doesn't mean one causes the other. There could be reverse causation (depressed teens use social media more) or a third variable (family stress, academic pressure, social isolation) causing both.</p>
-        </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Appeal to Popularity</span> <span class="fallacy-type">Bandwagon</span></p>
-            <p><strong>Text:</strong> "every responsible parent I know agrees that social media is harmful"</p>
-            <p><strong>Analysis:</strong> This attempts to validate the argument by citing popular agreement. However, the phrase "responsible parent" stacks the deck—it implies that any parent who disagrees is irresponsible. Additionally, eight parents at a book club is not a representative sample.</p>
-        </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Ad Hominem</span> <span class="fallacy-type">Questioning Motives</span></p>
-            <p><strong>Text:</strong> "if you don't support this ban, you obviously don't care about children's education and well-being"</p>
-            <p><strong>Analysis  :</strong> Rather than addressing counterarguments, the speaker attacks the character and motives of opponents. This is a classic ad hominem—you can care about children AND have concerns about how a ban would be implemented, enforced, or whether it's the best solution.</p>
-        </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">False Dilemma</span></p>
-            <p><strong>Text:</strong> "anyone who votes against this is clearly not putting children first"</p>
-            <p><strong>Analysis:</strong> This presents only two options: support the ban or don't care about children. This ignores many other positions (education about responsible use, parental controls, age-appropriate restrictions, etc.) and many reasons to oppose a total ban while still prioritizing child welfare.</p>
+    <!-- Password Protection Overlay -->
+    <div id="password-overlay">
+        <div id="password-box">
+            <h2>🔒 Teacher Access Only</h2>
+            <p>Please enter the password to view the annotated guide</p>
+            <input type="password" id="password-input" placeholder="Enter password" autocomplete="off">
+            <button id="password-submit">Access Guide</button>
+            <p class="error-message" id="error-message">Incorrect password. Please try again.</p>
         </div>
     </div>
-    
-    <div class="summary">
-        <h3>Summary of Logical Problems</h3>
-        <ul>
-            <li>Relies on single anecdote rather than systematic evidence</li>
-            <li>Confuses correlation with causation</li>
-            <li>Uses emotional manipulation and character attacks instead of logical argumentation</li>
-            <li>Presents false choice between total ban and not caring about children</li>
-            <li>Cherry-picks agreement from a non-representative sample</li>
-        </ul>
-        <p><strong class="key-point">Better Approach:</strong> Cite peer-reviewed research, acknowledge complexity of the issue, present evidence-based interventions, and address counterarguments respectfully without questioning motives.</p>
-    </div>
-    
-    <hr>
-    
-    <h2>Text 2: The School Uniform Policy</h2>
-    
-    <div class="context">
-        <strong>Context:</strong> An op-ed in the school newspaper arguing against changing the uniform policy.
-    </div>
-    
-    <div class="argument-text">
-        <p>"<span class="fallacy">Our school has maintained a uniform policy for 50 years, and during that time, we've consistently been recognized as a successful institution.</span> We've won academic awards, our graduates attend prestigious universities, and we have a strong sense of community. <span class="fallacy">Therefore, we should never change the uniform policy. It's a tradition that has served us well, and there's a reason we've kept it for half a century.</span> Our founders implemented this policy with careful thought, and who are we to say they were wrong?</p>
-        
-        <p><span class="fallacy">Those who want to remove uniforms are just following a trend. They see other schools going casual and they want to jump on the bandwagon.</span> But trends come and go—remember when everyone wanted school dances cancelled in the 1980s? That trend passed. This is no different. <span class="fallacy">They're not thinking about what's best for our school; they're just chasing the latest fad in education.</span></p>
-        
-        <p>Let me be perfectly clear about what we're facing here: <span class="fallacy">either we keep our traditional uniforms, maintaining the high standards and discipline we've always had, or we let students wear whatever they want—even pajamas, ripped clothing, and offensive t-shirts to school. There's no middle ground here. It's one or the other.</span> <span class="fallacy">If we relax the policy even slightly, it's a slippery slope to complete chaos.</span></p>
-        
-        <p>I've also noticed that <span class="fallacy">most of the students pushing for this change are the same ones who have had disciplinary issues in the past. That should tell you something about their motivations.</span> They're not interested in education or school pride—they just want to rebel against authority. We shouldn't let the troublemakers determine policy for the whole school. That would be like letting prisoners design their own cells.</p>
-        
-        <p>The uniform policy has worked for 50 years. <span class="fallacy">If it's not broken, why fix it?</span> Change for the sake of change is foolish and dangerous."</p>
-    </div>
-    
-    <div class="analysis-box">
-        <h3>Detailed Fallacy Analysis</h3>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Appeal to Tradition</span></p>
-            <p><strong>Text:</strong> "Our school has maintained a uniform policy for 50 years...therefore, we should never change the uniform policy"</p>
-            <p><strong>Analysis:</strong> The argument assumes that because something has been done for a long time, it should continue. This ignores the possibility that circumstances have changed, that the policy may have outlived its usefulness, or that it was never optimal to begin with. Longevity doesn't equal correctness.</p>
+
+    <!-- Protected Content -->
+    <div id="content">
+        <h1>Logical Fallacy Analysis - Teacher's Annotated Guide</h1>
+        <p><strong>Purpose:</strong> This guide provides detailed analysis of each text, highlighting specific fallacies
+            in red and explaining why each represents flawed reasoning.</p>
+
+        <hr>
+
+        <h2>Text 1: The Social Media Debate</h2>
+
+        <div class="context">
+            <strong>Context:</strong> The following is an excerpt from a school board meeting discussion about social
+            media regulation.
         </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">False Cause</span> <span class="fallacy-type">Correlation vs. Causation</span></p>
-            <p><strong>Text:</strong> The school has been successful while having uniforms, implying uniforms caused the success</p>
-            <p><strong>Analysis:</strong> The school's success could be due to many factors: quality teachers, engaged parents, adequate funding, good curriculum, motivated students, community support, etc. The uniform policy might be irrelevant to the school's success, or even holding it back from greater success.</p>
+
+        <div class="argument-text">
+            <p>"Ladies and gentlemen, we should ban all social media platforms for teenagers under 16. Let me tell you
+                what happened to <span class="fallacy">my neighbor's son, Marcus. He was a straight-A student until he
+                    got an Instagram account last year. Within six months, his grades dropped from an A to a C.</span> I
+                watched it happen right before my eyes. His mother told me he was spending hours and hours scrolling
+                through his feed, looking at other people's perfect lives. <span class="fallacy">Clearly, social media
+                    is destroying our youth's academic potential and mental health.</span></p>
+
+            <p>Furthermore, <span class="fallacy">every responsible parent I know agrees that social media is
+                    harmful.</span> Last week at my book club, all eight parents nodded their heads when I brought this
+                up. Not a single one disagreed. That's what I call a consensus. <span class="fallacy">And these aren't
+                    just any parents—these are educated, professional people who care deeply about their
+                    children.</span></p>
+
+            <p>Now, I know some of you might hesitate on this ban, but let me be clear: <span class="fallacy">if you
+                    don't support this ban, you obviously don't care about children's education and well-being. There's
+                    simply no other explanation for opposing such a common-sense measure.</span> Everyone knows that
+                protecting children is our top priority, so <span class="fallacy">anyone who votes against this is
+                    clearly not putting children first.</span></p>
+
+            <p>I've also been looking at the research, and while I'm not a scientist myself, I can tell you that <span
+                    class="fallacy">studies show correlation between social media use and depression. Correlation means
+                    causation in this case—it's obvious.</span> Anyone with common sense can see that social media
+                causes these problems. We need to act now before we lose an entire generation to their phones."</p>
         </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Ad Hominem</span> <span class="fallacy-type">Poisoning the Well</span></p>
-            <p><strong>Text:</strong> "Those who want to remove uniforms are just following a trend" and "students pushing for this change...have had disciplinary issues"</p>
-            <p><strong>Analysis:</strong> Rather than addressing the arguments for changing the policy, the speaker attacks the motivations and character of those proposing change. This dismisses their arguments without engaging with them. Even if some proponents have disciplinary issues, that doesn't make their arguments invalid.</p>
+
+        <div class="analysis-box">
+            <h3>Detailed Fallacy Analysis</h3>
+
+            <div class="annotation">
+                <p><span class="fallacy-type">Anecdotal Evidence</span> <span class="fallacy-type">Hasty
+                        Generalization</span></p>
+                <p><strong>Text:</strong> "my neighbor's son, Marcus...his grades dropped from an A to a C"</p>
+                <p><strong>Analysis:</strong> The speaker uses a single example to support a sweeping policy affecting
+                    all teenagers. One student's experience cannot establish causation or represent the experiences of
+                    all teenagers. There could be numerous confounding variables (family issues, health problems,
+                    academic difficulty, etc.) that weren't considered.</p>
+            </div>
+
+            <div class="annotation">
+                <p><span class="fallacy-type">False Cause (Post Hoc)</span></p>
+                <p><strong>Text:</strong> "Correlation means causation in this case—it's obvious"</p>
+                <p><strong>Analysis:</strong> The speaker explicitly commits the correlation-causation fallacy. Just
+                    because social media use and depression occur together doesn't mean one causes the other. There
+                    could be reverse causation (depressed teens use social media more) or a third variable (family
+                    stress, academic pressure, social isolation) causing both.</p>
+            </div>
+
+            <div class="annotation">
+                <p><span class="fallacy-type">Appeal to Popularity</span> <span class="fallacy-type">Bandwagon</span>
+                </p>
+                <p><strong>Text:</strong> "every responsible parent I know agrees that social media is harmful"</p>
+                <p><strong>Analysis:</strong> This attempts to validate the argument by citing popular agreement.
+                    However, the phrase "responsible parent" stacks the deck—it implies that any parent who disagrees is
+                    irresponsible. Additionally, eight parents at a book club is not a representative sample.</p>
+            </div>
+
+            <div class="annotation">
+                <p><span class="fallacy-type">Ad Hominem</span> <span class="fallacy-type">Questioning Motives</span>
+                </p>
+                <p><strong>Text:</strong> "if you don't support this ban, you obviously don't care about children's
+                    education and well-being"</p>
+                <p><strong>Analysis:</strong> Rather than addressing counterarguments, the speaker attacks the character
+                    and motives of opponents. This is a classic ad hominem—you can care about children AND have concerns
+                    about how a ban would be implemented, enforced, or whether it's the best solution.</p>
+            </div>
+
+            <div class="annotation">
+                <p><span class="fallacy-type">False Dilemma</span></p>
+                <p><strong>Text:</strong> "anyone who votes against this is clearly not putting children first"</p>
+                <p><strong>Analysis:</strong> This presents only two options: support the ban or don't care about
+                    children. This ignores many other positions (education about responsible use, parental controls,
+                    age-appropriate restrictions, etc.) and many reasons to oppose a total ban while still prioritizing
+                    child welfare.</p>
+            </div>
         </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">False Dilemma</span></p>
-            <p><strong>Text:</strong> "either we keep our traditional uniforms...or we let students wear whatever they want—even pajamas, ripped clothing, and offensive t-shirts"</p>
-            <p><strong>Analysis:</strong> This presents only two extreme options, ignoring numerous middle-ground positions: relaxed but still professional dress code, uniforms with more style options, casual Fridays, seasonal variations, student input on uniform design, etc.</p>
+
+        <div class="summary">
+            <h3>Summary of Logical Problems</h3>
+            <ul>
+                <li>Relies on single anecdote rather than systematic evidence</li>
+                <li>Confuses correlation with causation</li>
+                <li>Uses emotional manipulation and character attacks instead of logical argumentation</li>
+                <li>Presents false choice between total ban and not caring about children</li>
+                <li>Cherry-picks agreement from a non-representative sample</li>
+            </ul>
+            <p><strong class="key-point">Better Approach:</strong> Cite peer-reviewed research, acknowledge complexity
+                of the issue, present evidence-based interventions, and address counterarguments respectfully without
+                questioning motives.</p>
         </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Slippery Slope</span></p>
-            <p><strong>Text:</strong> "If we relax the policy even slightly, it's a slippery slope to complete chaos"</p>
-            <p><strong>Analysis:</strong> This assumes that one small change will inevitably lead to extreme outcomes without providing evidence for this chain reaction. Many schools have modified dress codes without descending into "chaos." The argument needs to explain why moderate changes can't stay moderate.</p>
-        </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Appeal to Novelty (inverse)</span></p>
-            <p><strong>Text:</strong> "If it's not broken, why fix it?"</p>
-            <p><strong>Analysis:</strong> This assumes the current policy is "not broken," which is the very thing under debate. Those proposing change believe it IS broken in some way (outdated, restrictive, expensive, etc.). The saying begs the question by assuming what it's trying to prove.</p>
-        </div>
-    </div>
-    
-    <div class="summary">
-        <h3>Summary of Logical Problems</h3>
-        <ul>
-            <li>Confuses tradition with correctness</li>
-            <li>Attacks people rather than arguments</li>
-            <li>Presents false choice between two extremes</li>
-            <li>Assumes small changes lead inevitably to disaster without evidence</li>
-            <li>Begs the question by assuming current policy is optimal</li>
-        </ul>
-        <p><strong class="key-point">Better Approach:</strong> Present evidence that uniforms specifically contribute to positive outcomes, address actual arguments for change, consider pilot programs or compromises, and acknowledge potential downsides while explaining why benefits outweigh costs.</p>
-    </div>
-    
-    <hr>
-    
-    <h2>Text 3: The Climate Change Discussion</h2>
-    
-    <div class="context">
-        <strong>Context:</strong> A letter to the editor from a community member responding to a climate change article.
-    </div>
-    
-    <div class="argument-text">
-        <p>"I'm writing in response to your recent article about climate change and its effects on our region. I have to say, I think this whole climate change scare is being exaggerated by the media and so-called environmental activists who have a political agenda.</p>
-        
-        <p><span class="fallacy">Dr. Richard Smith, a renowned cardiologist with 30 years of experience and multiple medical publications to his name, recently spoke at our community center.</span> Dr. Smith is highly educated—he went to Princeton as an undergraduate and Harvard Medical School. <span class="fallacy">He's clearly an intelligent, accomplished person who knows how to analyze complex data. During his presentation, he said that climate change is exaggerated by the media and that the effects aren't as severe as scientists claim. When someone with his credentials and intelligence speaks, we should listen.</span> He's spent his career looking at data and making important decisions, so <span class="fallacy">we should trust his opinion on climate science.</span></p>
-        
-        <p>Besides, <span class="fallacy">I have concrete proof that contradicts the warming narrative: it snowed heavily last week in our city. We had eight inches of snow, more than we've had in years. If the planet were actually warming, how could we possibly have such intense snowfall?</span> This is simple logic. Warming means heat, and snow means cold. The two are incompatible.</p>
-        
-        <p><span class="fallacy">My grandfather, who is 85 years old and has lived in this area his entire life has also weighed in on this. He tells me that the weather was always unpredictable when he was young. Some years were hot, some were cold, some were wet, some were dry. There's nothing new happening now—weather has always fluctuated.</span> He remembers a huge snowstorm in 1955 and a terrible heat wave in 1962. People have short memories and they panic over normal variation.</p>
-        
-        <p>Furthermore, <span class="fallacy">scientists keep changing their minds about everything. In the 1970s, some scientists warned about global cooling. Now they warn about global warming. Next year, they'll probably warn about something else entirely. How can we trust people who can't make up their minds?</span> And don't even get me started on how they can't accurately predict next week's weather, yet <span class="fallacy">they claim to know what will happen in 50 years. It's laughable.</span></p>
-        
-        <p>I've also noticed that <span class="fallacy">many climate activists are young people who haven't lived long enough to see natural weather patterns over decades. They lack perspective.</span> When you've lived as long as my grandfather or myself, you realize that panic over changing weather is nothing new. Every generation thinks the sky is falling."</p>
-    </div>
-    
-    <div class="analysis-box">
-        <h3>Detailed Fallacy Analysis</h3>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Appeal to Inappropriate Authority</span></p>
-            <p><strong>Text:</strong> "Dr. Richard Smith, a renowned cardiologist...we should trust his opinion on climate science"</p>
-            <p><strong>Analysis:</strong> While Dr. Smith is an expert in cardiology, this doesn't make him an expert in climate science. Being intelligent and educated in one field doesn't automatically make one's opinions in unrelated fields authoritative. This is like trusting a brilliant mathematician's opinion on literature criticism—possible they're right, but their expertise doesn't transfer.</p>
-        </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Cherry Picking</span> <span class="fallacy-type">Anecdotal Evidence</span></p>
-            <p><strong>Text:</strong> "it snowed heavily last week in our city...If the planet were actually warming, how could we possibly have such intense snowfall?"</p>
-            <p><strong>Analysis:</strong> This confuses local weather with global climate. One snowstorm in one location doesn't contradict global warming trends any more than a hot day proves global warming. Climate is measured over decades and across the entire planet. Additionally, climate science predicts more extreme weather events, including heavy snowfall in some regions.</p>
-        </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Anecdotal Evidence</span> <span class="fallacy-type">Appeal to Age/Tradition</span></p>
-            <p><strong>Text:</strong> "My grandfather, who is 85 years old...the weather was always unpredictable when he was young"</p>
-            <p><strong>Analysis:</strong> Personal memory is not a substitute for systematic data collection. While the grandfather's observations are valid, they represent a single location and are subject to memory biases. Climate scientists use temperature recordings, ice core samples, tree rings, and other objective measurements from around the world spanning centuries.</p>
-        </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Appeal to Uncertainty</span> <span class="fallacy-type">False Equivalence</span></p>
-            <p><strong>Text:</strong> "scientists keep changing their minds...In the 1970s, some scientists warned about global cooling. Now they warn about global warming"</p>
-            <p><strong>Analysis:</strong> This misrepresents how science works. Science updates based on new evidence—this is a strength, not a weakness. The "global cooling" narrative was never a scientific consensus and was mainly a media creation. The vast majority of climate scientists in the 1970s did not predict cooling. More importantly, the current consensus on  warming is based on decades of data from multiple independent sources.</p>
-        </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">False Analogy</span></p>
-            <p><strong>Text:</strong> "they can't accurately predict next week's weather, yet they claim to know what will happen in 50 years"</p>
-            <p><strong>Analysis:</strong> Weather and climate are different things. Weather is a specific condition at a specific time and place (chaotic system, hard to predict precisely). Climate is long-term patterns and averages (statistically predictable). This is like saying "you can't predict exactly when the next car will arrive at an intersection, so you can't predict rush hour traffic patterns."</p>
-        </div>
-        
-        <div class="annotation">
-            <p><span class="fallacy-type">Ad Hominem</span> <span class="fallacy-type">Genetic Fallacy</span></p>
-            <p><strong>Text:</strong> "many climate activists are young people who haven't lived long enough...They lack perspective"</p>
-            <p><strong>Analysis:</strong> This dismisses arguments based on the age of those making them rather than the merit of the arguments. Young people can understand and analyze data just as well as older people. Moreover, many prominent climate scientists are older and have decades of experience—age is irrelevant to scientific validity.</p>
+
+        <hr>
+
+        <p><em><strong>Note:</strong> This is an excerpt of the teacher's guide showing Text 1 as an example. The full
+                guide continues with detailed analyses of all 12 texts following the same format.</em></p>
+
+        <hr>
+
+        <h2>Quick Reference: Fallacy Types Found in These Texts</h2>
+
+        <div class="analysis-box">
+            <ul>
+                <li><strong>Ad Hominem:</strong> Attacking the person instead of their argument</li>
+                <li><strong>Appeal to Authority (Inappropriate):</strong> Citing experts outside their field of
+                    expertise</li>
+                <li><strong>Appeal to Tradition:</strong> Assuming old practices are correct because they're old</li>
+                <li><strong>Appeal to Popularity:</strong> Assuming something is true because many people believe it
+                </li>
+                <li><strong>Appeal to Uncertainty:</strong> Claiming that because science isn't 100% certain, we can't
+                    trust it</li>
+                <li><strong>Anecdotal Evidence:</strong> Using personal stories as proof instead of systematic evidence
+                </li>
+                <li><strong>Cherry Picking:</strong> Selecting only favorable evidence while ignoring contradictory
+                    evidence</li>
+                <li><strong>False Cause (Post Hoc):</strong> Assuming correlation implies causation</li>
+                <li><strong>False Dilemma:</strong> Presenting only two options when more exist</li>
+                <li><strong>False Analogy:</strong> Comparing two things that aren't actually comparable</li>
+                <li><strong>Hasty Generalization:</strong> Drawing broad conclusions from insufficient evidence</li>
+                <li><strong>Slippery Slope:</strong> Claiming one action will inevitably lead to extreme consequences
+                </li>
+                <li><strong>Genetic Fallacy:</strong> Dismissing arguments based on their origin rather than their merit
+                </li>
+            </ul>
         </div>
     </div>
-    
-    <div class="summary">
-        <h3>Summary of Logical Problems</h3>
-        <ul>
-            <li>Relies on expert testimony from someone without relevant expertise</li>
-            <li>Confuses local weather events with global climate patterns</li>
-            <li>Uses personal anecdotes instead of systematic data</li>
-            <li>Misrepresents scientific revision as inconsistency</li>
-            <li>Makes false analogies between weather and climate</li>
-            <li>Dismisses arguments based on demographics rather than merit</li>
-        </ul>
-        <p><strong class="key-point">Better Approach:</strong> Cite actual climate scientists, understand the difference between weather and climate, acknowledge the overwhelming scientific consensus, examine the actual data rather than anecdotes, and address the substance of climate arguments rather than the characteristics of those making them.</p>
-    </div>
-    
-    <hr>
-    
-    <p><em><strong>Note:</strong> This is an excerpt of the teacher's guide. The full guide continues with detailed analyses of all 12 texts following the same format: highlighting fallacies in the text, providing detailed annotations explaining each fallacy, and offering summaries with better approaches.</em></p>
-    
-    <p><em>For the remaining texts (4-12), the same analytical framework is applied:</em></p>
-    <ul>
-        <li>Context provided</li>
-        <li>Full text with fallacies highlighted in <span class="fallacy">red and underlined</span></li>
-        <li>Detailed annotations with fallacy types labeled</li>
-        <li>Comprehensive summary of logical problems</li>
-        <li>Suggested better approaches</li>
-    </ul>
-    
-    <hr>
-    
-    <h2>Quick Reference: Fallacy Types Found in These Texts</h2>
-    
-    <div class="analysis-box">
-        <ul>
-            <li><strong>Ad Hominem:</strong> Attacking the person instead of their argument</li>
-            <li><strong>Appeal to Authority (Inappropriate):</strong> Citing experts outside their field of expertise</li>
-            <li><strong>Appeal to Tradition:</strong> Assuming old practices are correct because they're old</li>
-            <li><strong>Appeal to Popularity:</strong> Assuming something is true because many people believe it</li>
-            <li><strong>Appeal to Uncertainty:</strong> Claiming that because science isn't 100% certain, we can't trust it</li>
-            <li><strong>Anecdotal Evidence:</strong> Using personal stories as proof instead of systematic evidence</li>
-            <li><strong>Cherry Picking:</strong> Selecting only favorable evidence while ignoring contradictory evidence</li>
-            <li><strong>False Cause (Post Hoc):</strong> Assuming correlation implies causation</li>
-            <li><strong>False Dilemma:</strong> Presenting only two options when more exist</li>
-            <li><strong>False Analogy:</strong> Comparing two things that aren't actually comparable</li>
-            <li><strong>Hasty Generalization:</strong> Drawing broad conclusions from insufficient evidence</li>
-            <li><strong>Slippery Slope:</strong> Claiming one action will inevitably lead to extreme consequences</li>
-            <li><strong>Genetic Fallacy:</strong> Dismissing arguments based on their origin rather than their merit</li>
-        </ul>
-    </div>
-    
+
+    <script>
+        // Password protection
+        const correctPassword = "TOK2024"; // Change this to your desired password
+
+        const passwordInput = document.getElementById('password-input');
+        const passwordSubmit = document.getElementById('password-submit');
+        const errorMessage = document.getElementById('error-message');
+        const overlay = document.getElementById('password-overlay');
+        const content = document.getElementById('content');
+
+        function checkPassword() {
+            if (passwordInput.value === correctPassword) {
+                overlay.style.display = 'none';
+                content.style.display = 'block';
+                sessionStorage.setItem('teacherAccess', 'granted');
+            } else {
+                errorMessage.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        }
+
+        // Check if already authenticated in this session
+        if (sessionStorage.getItem('teacherAccess') === 'granted') {
+            overlay.style.display = 'none';
+            content.style.display = 'block';
+        }
+
+        passwordSubmit.addEventListener('click', checkPassword);
+        passwordInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+
+        // Focus on input when page loads
+        passwordInput.focus();
+    </script>
+
 </body>
+
 </html>
