@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOK Logical Fallacies - Teaching Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .description {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        .resources {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .resource-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .resource-card.teacher {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .resource-card.teacher:hover {
+            box-shadow: 0 15px 40px rgba(240, 147, 251, 0.4);
+        }
+
+        .resource-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .resource-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .resource-desc {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .footer {
+            color: #95a5a6;
+            font-size: 0.9em;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .resources {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 40px 25px;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 5px;
+        }
+
+        .info-box {
+            background: #ecf0f1;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            color: #555;
+            padding-left: 25px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Logical Fallacies Analysis</h1>
+        <p class="subtitle">TOK (IB Diploma Programme) Teaching Resources</p>
+
+        <div class="description">
+            <p>Welcome! This resource provides comprehensive materials for teaching critical reasoning and logical
+                fallacy identification in Theory of Knowledge classes.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📚 What's Included</h3>
+            <ul>
+                <li><strong>12 Extended Texts</strong> with embedded logical fallacies</li>
+                <li>Topics relevant to students: social media, education policy, climate change, and more</li>
+                <li>Multiple fallacy types in each text for rich analysis</li>
+                <li>Discussion questions and analysis frameworks</li>
+            </ul>
+        </div>
+
+        <div class="resources">
+            <a href="student.html" class="resource-card student">
+                <div class="resource-icon">📖</div>
+                <div class="resource-title">Student Version</div>
+                <div class="resource-desc">Extended texts for analysis and discussion</div>
+            </a>
+
+            <a href="teacher.html" class="resource-card teacher">
+                <div class="resource-icon">🎓</div>
+                <div class="resource-title">Teacher's Guide</div>
+                <div class="resource-desc">Annotated analysis with highlighted fallacies</div>
+            </a>
+        </div>
+
+        <div class="info-box">
+            <h3>🎯 Fallacy Types Covered</h3>
+            <div style="text-align: center;">
+                <span class="badge">Ad Hominem</span>
+                <span class="badge">False Dilemma</span>
+                <span class="badge">Appeal to Authority</span>
+                <span class="badge">Slippery Slope</span>
+                <span class="badge">Hasty Generalization</span>
+                <span class="badge">False Cause</span>
+                <span class="badge">Cherry Picking</span>
+                <span class="badge">Appeal to Tradition</span>
+                <span class="badge">Anecdotal Evidence</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Created for IB Diploma Programme Theory of Knowledge educators</p>
+            <p style="margin-top: 10px;">Need to download? Find the DOCX versions in the <a
+                    href="https://github.com/mormontx" target="_blank">GitHub repository</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
