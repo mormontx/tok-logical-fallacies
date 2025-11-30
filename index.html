@@ -56,7 +56,7 @@
 
         .resources {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
@@ -193,6 +193,13 @@
                 <div class="resource-icon">🎓</div>
                 <div class="resource-title">Teacher's Guide</div>
                 <div class="resource-desc">Annotated analysis with highlighted fallacies</div>
+            </a>
+
+            <a href="reference.html" class="resource-card"
+                style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <div class="resource-icon">📚</div>
+                <div class="resource-title">Fallacy Reference</div>
+                <div class="resource-desc">Complete guide to identifying each fallacy type</div>
             </a>
         </div>
 

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Fallacies Reference Guide - TOK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 20px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+
+        .intro {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .intro h2 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+
+        .fallacy-card {
+            background: #f9f9f9;
+            border-left: 6px solid #667eea;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .fallacy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .fallacy-name {
+            color: #667eea;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .fallacy-aka {
+            color: #95a5a6;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .definition {
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .how-to-spot {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .how-to-spot ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .how-to-spot li {
+            margin: 8px 0;
+        }
+
+        .example {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .example-text {
+            font-style: italic;
+            color: #1976d2;
+            margin: 10px 0;
+        }
+
+        .why-fallacy {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .key-questions {
+            background: #f3e5f5;
+            border-left: 4px solid #9c27b0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .key-questions ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: #764ba2;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 5px 5px 15px 0;
+        }
+
+        .tip-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .tip-box h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Logical Fallacies Reference Guide</h1>
+        <p class="subtitle">Understanding and Identifying Common Reasoning Errors</p>
+
+        <div class="intro">
+            <h2>📚 What Are Logical Fallacies?</h2>
+            <p>Logical fallacies are errors in reasoning that undermine the logic of an argument. They often seem
+                persuasive and can be emotionally compelling, but they don't hold up under logical scrutiny.
+                Understanding fallacies helps you evaluate arguments critically and construct stronger arguments
+                yourself.</p>
+        </div>
+
+        <div class="tip-box">
+            <h3>💡 How to Use This Guide</h3>
+            <p>For each fallacy, you'll find:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Definition:</strong> What the fallacy is</li>
+                <li><strong>How to Spot It:</strong> Key patterns and warning signs</li>
+                <li><strong>Example:</strong> Real-world illustration</li>
+                <li><strong>Why It's Fallacious:</strong> What makes the reasoning flawed</li>
+                <li><strong>Questions to Ask:</strong> Critical thinking prompts</li>
+            </ul>
+        </div>
+
+        <!-- FALLACY 1: AD HOMINEM -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">1. Ad Hominem</div>
+            <div class="fallacy-aka">Also known as: "Attack the Person," "Personal Attack"</div>
+            <div class="category-badge">Relevance Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Attacking the person making an argument rather than addressing the argument itself. The speaker
+                dismisses or rejects someone's position by attacking their character, circumstances, or personal
+                attributes instead of engaging with the substance of their claim.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>Focus shifts from the argument to the person making it</li>
+                    <li>Phrases like "You can't trust them because..." or "They're just..."</li>
+                    <li>Bringing up irrelevant personal details (age, appearance, past mistakes)</li>
+                    <li>Questioning motives instead of addressing evidence</li>
+                    <li>Character assassination or name-calling</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "Sarah argues we should change the dress code, but she was late to school twice last month, so we
+                    can't trust her judgment on school policies."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>A person's character flaws, mistakes, or personal attributes don't automatically make their arguments
+                    wrong. Even unreliable people can make valid points. The truth of a claim should be evaluated based
+                    on evidence and logic, not on who's making the claim.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>Is the criticism relevant to the argument being made?</li>
+                    <li>Would the argument be different if someone else made it?</li>
+                    <li>Are they addressing what was said or who said it?</li>
+                    <li>Is there any actual evidence presented against the claim?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 2: APPEAL TO INAPPROPRIATE AUTHORITY -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">2. Appeal to Inappropriate Authority</div>
+            <div class="fallacy-aka">Also known as: "False Authority," "Argument from Authority"</div>
+            <div class="category-badge">Relevance Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Using the opinion of an expert or authority figure who is NOT actually an expert in the relevant field,
+                or implying that expertise in one area automatically transfers to all areas.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>"Dr. X says..." when Dr. X isn't an expert in that specific field</li>
+                    <li>Celebrity endorsements as evidence</li>
+                    <li>"This successful person believes..." (success ≠ expertise in all areas)</li>
+                    <li>Credentials in an unrelated field being used as proof</li>
+                    <li>Vague references to "experts" or "studies" without specific qualifications</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "Dr. Smith, a renowned cardiologist, says climate change is exaggerated. He went to Harvard, so we
+                    should trust his opinion on climate science."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>Expertise in one field doesn't automatically transfer to another. A cardiologist's medical training
+                    doesn't make them an expert in climate science. Being intelligent, educated, or successful doesn't
+                    mean someone is knowledgeable about every topic.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>Is this person actually an expert in THIS specific field?</li>
+                    <li>What are their qualifications in this area?</li>
+                    <li>Would a legitimate expert in this field agree?</li>
+                    <li>Is there a consensus among actual experts?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 3: APPEAL TO TRADITION -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">3. Appeal to Tradition</div>
+            <div class="fallacy-aka">Also known as: "We've Always Done It This Way"</div>
+            <div class="category-badge">Relevance Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Arguing that something is correct or better simply because it's traditional, old, or "the way we've
+                always done it." The argument assumes that longevity equals correctness.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>"We've always done it this way"</li>
+                    <li>"This worked for our ancestors/founders/previous generations"</li>
+                    <li>"This is a time-honored tradition"</li>
+                    <li>"If it's not broken, why fix it?"</li>
+                    <li>Emphasizing how long something has existed as proof of its value</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "Our school has had a uniform policy for 50 years. We should never change it because it's a
+                    tradition that has served us well."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>Age doesn't determine correctness. Many traditional practices were based on outdated knowledge or
+                    different circumstances. Just because something has been done for a long time doesn't mean it's
+                    optimal, ethical, or still relevant. Circumstances change, knowledge advances.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>Why was this tradition started in the first place?</li>
+                    <li>Have circumstances changed since then?</li>
+                    <li>Is there actual evidence it's still beneficial?</li>
+                    <li>Are we keeping it because it works or just because it's familiar?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 4: APPEAL TO POPULARITY -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">4. Appeal to Popularity (Bandwagon)</div>
+            <div class="fallacy-aka">Also known as: "Argumentum ad Populum," "Everyone's Doing It"</div>
+            <div class="category-badge">Relevance Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Arguing that something must be true or good because many people believe it or do it. Using popularity as
+                evidence of correctness.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>"Everyone knows that..."</li>
+                    <li>"Most people agree..."</li>
+                    <li>"All the successful/smart/educated people believe..."</li>
+                    <li>"The majority can't be wrong"</li>
+                    <li>Using polling data or consensus as sole evidence</li>
+                    <li>Peer pressure framed as argument</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "Every responsible parent I know agrees that social media is harmful. All eight parents at my book
+                    club nodded in agreement. That's consensus."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>Popular belief doesn't equal truth. History is full of examples where the majority was wrong (flat
+                    earth, geocentrism, etc.). Additionally, the sample might not be representative, and what's popular
+                    can be influenced by many factors unrelated to truth or quality.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>Is this a representative sample or just a specific group?</li>
+                    <li>What evidence do these people have for their belief?</li>
+                    <li>Have popular beliefs been wrong before?</li>
+                    <li>What would change if the consensus shifted?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 5: ANECDOTAL EVIDENCE -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">5. Anecdotal Evidence</div>
+            <div class="fallacy-aka">Also known as: "Personal Experience Fallacy"</div>
+            <div class="category-badge">Weak Evidence Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Using personal stories, individual cases, or isolated examples as proof of a general claim, instead of
+                systematic evidence or statistical data.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>"I know someone who..." or "My friend/relative..."</li>
+                    <li>Single stories used to prove broad claims</li>
+                    <li>"In my experience..."</li>
+                    <li>"I once heard about..."</li>
+                    <li>One or two examples presented as representative</li>
+                    <li>"This happened to me, so it must be true for everyone"</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "My friend Jennifer switched to an organic diet and lost 10 pounds. This proves organic food causes
+                    weight loss."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>Individual cases can be influenced by many factors and may not represent typical experiences. One
+                    person's experience doesn't establish patterns. There could be confounding variables, coincidence,
+                    or the person might be an outlier. Systematic data from many cases is needed for reliable
+                    conclusions.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>How many cases are being presented?</li>
+                    <li>Could other factors explain this person's experience?</li>
+                    <li>Is this experience typical or exceptional?</li>
+                    <li>What do systematic studies show?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 6: FALSE CAUSE -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">6. False Cause (Post Hoc)</div>
+            <div class="fallacy-aka">Also known as: "Correlation ≠ Causation," "Post Hoc Ergo Propter Hoc"</div>
+            <div class="category-badge">Causal Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Assuming that because two things are correlated or one event followed another, one must have caused the
+                other. Confusing correlation with causation.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>"After X happened, Y happened, so X caused Y"</li>
+                    <li>"Studies show correlation, therefore causation"</li>
+                    <li>Temporal sequence used as proof of causation</li>
+                    <li>"Every time X occurs, Y follows"</li>
+                    <li>Ignoring other possible explanations</li>
+                    <li>Assuming direct causation from statistical association</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "Eastside High built a new stadium and won the championship the next year. This proves expensive
+                    facilities guarantee success."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>Correlation doesn't prove causation. There could be: (1) reverse causation (B caused A, not A caused
+                    B), (2) a third variable causing both, (3) pure coincidence, or (4) a complex interaction of
+                    factors. Many things correlate without causing each other.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>Could the causation go the other direction?</li>
+                    <li>What other factors might explain both events?</li>
+                    <li>Is there a plausible mechanism for causation?</li>
+                    <li>Could this be coincidence?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 7: FALSE DILEMMA -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">7. False Dilemma (Either/Or)</div>
+            <div class="fallacy-aka">Also known as: "Black-and-White Thinking," "False Dichotomy"</div>
+            <div class="category-badge">Presumption Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Presenting only two options as if they're the only possibilities, when in fact there are other
+                alternatives. Forcing a choice between extremes while ignoring middle ground or other options.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>"Either we do X or Y happens" (presenting two extremes)</li>
+                    <li>"You're either with us or against us"</li>
+                    <li>"We have only two choices..."</li>
+                    <li>"It's all or nothing"</li>
+                    <li>Ignoring middle-ground positions</li>
+                    <li>"If you don't support X, you must support Y"</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "Either we adopt iPads immediately and prepare for the modern world, or we continue with outdated
+                    textbooks and watch our students fail. There's no middle ground."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>Most issues have multiple options, not just two extremes. There are usually compromise positions,
+                    alternative solutions, or gradual approaches. By limiting options artificially, the argument
+                    manipulates choice and ignores complexity.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>Are there really only two options?</li>
+                    <li>What middle-ground positions exist?</li>
+                    <li>What other alternatives haven't been mentioned?</li>
+                    <li>Could we combine elements of both options?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 8: SLIPPERY SLOPE -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">8. Slippery Slope</div>
+            <div class="fallacy-aka">Also known as: "Domino Theory," "Thin End of the Wedge"</div>
+            <div class="category-badge">Causal Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Arguing that one small step will inevitably lead to a chain of events resulting in extreme consequences,
+                without providing evidence for this chain reaction.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>"If we allow X, then Y will happen, then Z, and eventually disaster"</li>
+                    <li>Long chain of hypothetical consequences</li>
+                    <li>"This is the first step toward..."</li>
+                    <li>"Give an inch, they'll take a mile"</li>
+                    <li>Catastrophic predictions without evidence of inevitability</li>
+                    <li>"Once we start down this path..."</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "If we allow ripped jeans, next students will want shorts, then tank tops, then swimsuits. Soon
+                    school will look like a beach party."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>The argument assumes each step must inevitably lead to the next without explaining why or providing
+                    evidence. Moderate changes can stay moderate. The chain reaction isn't proven—it's assumed. Each
+                    step in the chain needs its own justification.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>Is there evidence that each step leads to the next?</li>
+                    <li>Can't we stop at any point in this chain?</li>
+                    <li>Have similar policies led to these extreme outcomes elsewhere?</li>
+                    <li>What prevents us from drawing a line somewhere in the middle?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 9: HASTY GENERALIZATION -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">9. Hasty Generalization</div>
+            <div class="fallacy-aka">Also known as: "Jumping to Conclusions," "Insufficient Sample"</div>
+            <div class="category-badge">Weak Evidence Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Drawing a broad conclusion based on a small or unrepresentative sample. Making sweeping claims from
+                insufficient evidence.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>Small sample size used to prove general rule</li>
+                    <li>"All X are Y" based on limited examples</li>
+                    <li>"This always happens" based on few cases</li>
+                    <li>Generalizing from exceptional cases</li>
+                    <li>Using one or two examples to prove a universal claim</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "I asked 20 colleagues if tests are stressful, and 18 said yes. Therefore, everyone finds tests
+                    stressful, so they must be harmful."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>The sample is too small or unrepresentative to support the broad conclusion. You can't reliably
+                    generalize from a few cases to all cases. The examples might be exceptions rather than the rule, or
+                    the sample might be biased.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>How many examples support this claim?</li>
+                    <li>Is the sample representative of the whole group?</li>
+                    <li>Could these be exceptions rather than the rule?</li>
+                    <li>What percentage of cases does this actually represent?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 10: CHERRY PICKING -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">10. Cherry Picking</div>
+            <div class="fallacy-aka">Also known as: "Selective Evidence," "Suppressed Evidence"</div>
+            <div class="category-badge">Weak Evidence Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Selecting only favorable evidence while ignoring or dismissing contradictory evidence. Presenting a
+                biased picture by highlighting data that supports your position and hiding what doesn't.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>Citing only studies that support their view</li>
+                    <li>Ignoring contradictory data or research</li>
+                    <li>Using a single exceptional case as representative</li>
+                    <li>Dismissing counterevidence as "biased" or "unreliable"</li>
+                    <li>Highlighting positive data while downplaying negative</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "It snowed heavily last week with eight inches of snow. If global warming were real, how could we
+                    have such intense snowfall?"
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>By selecting only favorable evidence, you create a misleading picture. One data point doesn't refute
+                    a trend. Local weather doesn't disprove global climate patterns. A full, honest evaluation requires
+                    considering all relevant evidence, not just what supports your pre-existing view.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>What evidence is being left out?</li>
+                    <li>Are contradictory findings being addressed?</li>
+                    <li>Is this example representative or exceptional?</li>
+                    <li>What does the broader body of evidence show?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 11: APPEAL TO UNCERTAINTY -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">11. Appeal to Uncertainty</div>
+            <div class="fallacy-aka">Also known as: "Argument from Ignorance (variant)"</div>
+            <div class="category-badge">Presumption Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Arguing that because we're not 100% certain about something, we can't trust it at all. Using the
+                inherent uncertainty in science or knowledge as a reason to dismiss well-supported conclusions.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>"Scientists keep changing their minds"</li>
+                    <li>"If they're not 100% sure, we can't trust them"</li>
+                    <li>"There's always contradictory research"</li>
+                    <li>"Since experts disagree, we can't know anything"</li>
+                    <li>Exploiting normal scientific revision as proof of unreliability</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "Scientists said eggs were bad, then good. Coffee was bad, then good. They keep changing their
+                    minds, so we can't trust nutritional science at all."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>Science progresses by updating knowledge based on new evidence—this is a strength, not a weakness.
+                    Perfect certainty is rarely achievable, but that doesn't mean all claims are equally uncertain. We
+                    can have high confidence in well-supported conclusions even if we don't have absolute certainty.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>What's the current level of scientific consensus?</li>
+                    <li>Is revision based on new evidence a weakness or a strength?</li>
+                    <li>How certain do we need to be to act?</li>
+                    <li>What's the quality of evidence supporting the current view?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 12: FALSE ANALOGY -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">12. False Analogy</div>
+            <div class="fallacy-aka">Also known as: "Weak Analogy," "Faulty Comparison"</div>
+            <div class="category-badge">Weak Evidence Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Comparing two things that aren't actually comparable in the relevant ways. Using an analogy where the
+                similarities are superficial but the differences are significant.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>"X is like Y, therefore what's true of Y is true of X"</li>
+                    <li>Comparing complex systems to simple ones</li>
+                    <li>"It's just like..." when the situations are actually quite different</li>
+                    <li>Surface similarities used to prove deeper connections</li>
+                    <li>Ignoring critical differences between the things compared</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "Weather forecasters can't predict next week's weather accurately, yet climate scientists claim to
+                    know what will happen in 50 years. It's laughable."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>Weather (specific conditions at specific times) and climate (long-term patterns and averages) are
+                    fundamentally different things. The analogy ignores crucial differences. Just because two things
+                    share some features doesn't mean conclusions about one apply to the other.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>Are these things actually comparable in the relevant ways?</li>
+                    <li>What are the key differences being ignored?</li>
+                    <li>Do the similarities run deep enough to support this conclusion?</li>
+                    <li>Could a different analogy lead to the opposite conclusion?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FALLACY 13: GENETIC FALLACY -->
+        <div class="fallacy-card">
+            <div class="fallacy-name">13. Genetic Fallacy</div>
+            <div class="fallacy-aka">Also known as: "Fallacy of Origins"</div>
+            <div class="category-badge">Relevance Fallacy</div>
+
+            <div class="section-header">📖 Definition</div>
+            <div class="definition">
+                Judging something as good or bad based solely on where it comes from, who proposed it, or its history,
+                rather than evaluating it on its current merits.
+            </div>
+
+            <div class="how-to-spot">
+                <strong>🔍 How to Spot It:</strong>
+                <ul>
+                    <li>"This idea came from X, so it must be wrong/right"</li>
+                    <li>Dismissing arguments based on source rather than content</li>
+                    <li>"Young people don't have enough experience..."</li>
+                    <li>"That was developed during a different era..."</li>
+                    <li>Judging an argument by demographics rather than merit</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📝 Example:</strong>
+                <div class="example-text">
+                    "Climate activists are young people who haven't lived long enough to see weather patterns over
+                    decades. They lack perspective, so we can dismiss their concerns."
+                </div>
+            </div>
+
+            <div class="why-fallacy">
+                <strong>❌ Why It's Fallacious:</strong>
+                <p>The origin or source of an idea doesn't determine its truth or value. Young people can present valid
+                    data and arguments. Old ideas can still be valuable. The merit of a claim should be evaluated based
+                    on evidence and reasoning, not on who proposes it or where it came from.</p>
+            </div>
+
+            <div class="key-questions">
+                <strong>❓ Questions to Ask:</strong>
+                <ul>
+                    <li>Is the criticism about the idea or its origin?</li>
+                    <li>Would the argument be evaluated differently with a different source?</li>
+                    <li>What evidence supports or contradicts the claim itself?</li>
+                    <li>Are we judging the message or the messenger?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tip-box" style="margin-top: 50px;">
+            <h3>🎯 Final Tips for Identifying Fallacies</h3>
+            <ul style="margin-left: 25px; margin-top: 15px;">
+                <li><strong>Separate the claim from the reasoning:</strong> Ask "What conclusion are they drawing?" and
+                    "What evidence supports it?"</li>
+                <li><strong>Look for emotional language:</strong> Strong emotions can mask weak logic</li>
+                <li><strong>Check for missing steps:</strong> Good arguments explain WHY the evidence supports the
+                    conclusion</li>
+                <li><strong>Consider alternative explanations:</strong> If other explanations exist, the argument may be
+                    oversimplified</li>
+                <li><strong>Watch for pressure tactics:</strong> "Everyone agrees," "You'd be foolish not to," etc.
+                    often signal weak arguments</li>
+                <li><strong>Ask for specifics:</strong> Vague claims about "studies" or "experts" may hide weak evidence
+                </li>
+            </ul>
+        </div>
+
+        <div
+            style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 2px solid #ecf0f1; color: #7f8c8d;">
+            <p>📚 TOK Logical Fallacies Reference Guide</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">Use with the Student Texts and Teacher's Analysis Guide</p>
+        </div>
+    </div>
+</body>
+
+</html>
