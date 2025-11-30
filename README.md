@@ -2,11 +2,11 @@
 
 A comprehensive set of teaching materials for IB Diploma Programme Theory of Knowledge classes, focusing on logical fallacy identification and critical reasoning skills.
 
-## 🌐 Live Website
+## Live Website
 
 **Access the materials online:** [https://mormontx.github.io/tok-logical-fallacies/](https://mormontx.github.io/tok-logical-fallacies/)
 
-## 📚 What's Included
+## What's Included
 
 This resource provides three interconnected components for teaching logical fallacies:
 
@@ -33,7 +33,7 @@ This resource provides three interconnected components for teaching logical fall
   - Critical thinking questions to ask
 - Color-coded cards for easy navigation
 
-## 🎯 Fallacy Types Covered
+## Fallacy Types Covered
 
 - **Ad Hominem** - Attacking the person instead of their argument
 - **Appeal to Inappropriate Authority** - Citing experts outside their field
@@ -49,7 +49,7 @@ This resource provides three interconnected components for teaching logical fall
 - **False Analogy** - Comparing incomparable things
 - **Genetic Fallacy** - Judging ideas by their origin
 
-## 🚀 How to Use
+## How to Use
 
 ### For Teachers:
 1. **Assign readings** from the student texts
@@ -65,14 +65,14 @@ This resource provides three interconnected components for teaching logical fall
 4. Explain why the reasoning is flawed
 5. Suggest how to improve the argument
 
-## 📖 Files in This Repository
+## Files in This Repository
 
 - `index.html` - Main landing page with navigation
 - `student.html` - Student version with all 12 extended texts
 - `teacher.html` - Password-protected annotated teacher's guide
 - `reference.html` - Comprehensive fallacy identification guide
 
-## 🔐 Teacher Access
+## Teacher Access
 
 The teacher's guide is password-protected to prevent students from viewing answers prematurely.
 
@@ -80,7 +80,7 @@ The teacher's guide is password-protected to prevent students from viewing answe
 
 To change the password, edit the `correctPassword` variable in `teacher.html` (line ~228).
 
-## 💡 Educational Applications
+## Educational Applications
 
 - **TOK classes** - Critical reasoning and knowledge questions
 - **Philosophy courses** - Informal logic and argumentation
@@ -88,7 +88,7 @@ To change the password, edit the `correctPassword` variable in `teacher.html` (l
 - **Media literacy** - Identifying fallacies in news and advertising
 - **Essay writing** - Avoiding logical errors in academic work
 
-## 📥 Download for Offline Use
+## Download for Offline Use
 
 All materials are also available as DOCX files for offline use, printing, or editing:
 - Student texts
@@ -97,32 +97,32 @@ All materials are also available as DOCX files for offline use, printing, or edi
 
 Contact the repository owner for downloadable versions.
 
-## 🎓 Target Audience
+## Target Audience
 
 - **Primary:** IB Diploma Programme TOK students and teachers
 - **Secondary:** High school philosophy, debate, and critical thinking courses
 - **Level:** Suitable for grades 11-12 / ages 16-18
 
-## 🤝 Contributing
+## Contributing
 
 This is an educational resource. If you'd like to suggest improvements, report issues, or contribute additional texts:
 - Open an issue describing your suggestion
 - Submit a pull request with proposed changes
 
-## 📜 License
+## License
 
 This educational resource is shared for non-commercial educational use. Feel free to use, adapt, and share with proper attribution.
 
-## ✨ Features
+## Features
 
-- ✅ Mobile-responsive design
-- ✅ No installation required - works in any browser
-- ✅ Clean, professional interface
-- ✅ Password protection for teacher materials
-- ✅ Printable and shareable
-- ✅ Free and open-source
+- Mobile-responsive design
+- No installation required - works in any browser
+- Clean, professional interface
+- Password protection for teacher materials
+- Printable and shareable
+- Free and open-source
 
-## 📧 Contact
+## Contact
 
 For questions, suggestions, or feedback about these materials, please open an issue on this repository.
 
