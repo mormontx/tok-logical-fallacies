@@ -130,4 +130,4 @@ For questions, suggestions, or feedback about these materials, please open an is
 
 **Created for IB Diploma Programme Theory of Knowledge educators**
 
-*Last updated: November 2024*
+*Last updated: November 2025*
